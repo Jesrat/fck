@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Script Name	    : FUCK                                                                                          
+# Description	    : scritp 2 kill a process by JGomez                                                                                                                                                                 
+# Author       	    : Josue Gomez                                                
+# Email             : jgomez@jesrat.com  
+# Args              : $1=Proces Name   
+# Run Information   : fuck firefox                                      
+# Error Log         : N/A
+
+
+main(){
+    ps -ef | grep $1 | grep -v grep | awk '{print $2}'| xargs kill
+}
+main $1
